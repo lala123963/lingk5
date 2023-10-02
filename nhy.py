@@ -6,6 +6,7 @@
 
 export nhytoken=token
 多账号用'===='隔开 例 账号1====账号2
+# const $ = new Env('农好优_V0.1')
 cron：13 8 * * *
 """
 import re
