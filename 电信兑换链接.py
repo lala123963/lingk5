@@ -37,7 +37,7 @@ from tools.aes_encrypt import AES_Ctypt
 from tools.rsa_encrypt import RSA_Encrypt
 from tools.tool import timestamp, get_environ, print_now
 from tools.send_msg import push
-from login.telecom_login import TelecomLogin
+from telecom_login import TelecomLogin
 from string import ascii_letters, digits
 from tools.notify import send
 
@@ -202,7 +202,7 @@ class ChinaTelecom:
 if __name__ == "__main__":
     TELECOM = get_environ("TELECOM1")
     
-    users = TELECOM.split("&")
+    users = TELECOM.split("\n")
     for i in range(len(users)):
         user = users[i].split("@")
         phone = user[0]
