@@ -55,7 +55,7 @@ class Ydbs():
 
     def sign(self):
         time.sleep(0.5)
-        step = str(random.randint(30000, 40000))
+        step = str(random.randint(20000, 30000))
         url = "https://apis.jxcxin.cn/api/mi?user=" + self.user + "&password=" + self.psw + "&step=" + step
         r = requests.get(url)
         if r.status_code != 200:
@@ -87,10 +87,10 @@ class Ydbs():
 if __name__ == '__main__':
     token = get_environ("ydbsck")
     msg = ''
-    cks = token.split("&")
+    cks = token.split("\n")
     print("检测到{}个ck记录\n开始刷步数\n".format(len(cks)))
     for ck in cks:
-        c = ck.split('&')
+        c = ck.split('\n')
         for i in c:
             d = i.split('#')
         try:
